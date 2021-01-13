@@ -11,7 +11,7 @@ pip install -e lru_cache
 # Usage
 
 ```python
-from lru_cache.LRUCache import LRUCache
+from LRUCache import LRUCache
 
 # initialize the LRU
 lru_cache = LRUCache(capacity=3)
@@ -45,5 +45,5 @@ print(lru_cache.is_empty())
 # Unit Tests
 to run unit tests
 ```bash
-python lru_cache/test
+python lru_cache/LRUCache_test.py
 ```

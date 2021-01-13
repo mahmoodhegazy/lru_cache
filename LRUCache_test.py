@@ -1,6 +1,6 @@
 ''' Test LRUCache funcctionality'''
 import unittest
-import LRUCache
+from LRUCache import LRUCache
 
 class LRUCacheTest(unittest.TestCase):
 
@@ -36,7 +36,7 @@ class LRUCacheTest(unittest.TestCase):
         self.lru_cache.put('2', 2)
         self.lru_cache.put('3', 3)
         self.lru_cache.put('6', 6)
-        assert self.lru_cache.most_recently_used() == '6'
+        assert self.lru_cache.most_recently_used() == '6',f'Curr mru {self.lru_cache.most_recently_used()}'
 
     def test_delete(self):
         """ Test LRU Cache delete functionality """
