@@ -116,6 +116,7 @@ class LRUCache(object):
         """
         return self.__tail.key
     
+    #private functions
     def __move_to_head(self,node):
         """
         :type node: object
