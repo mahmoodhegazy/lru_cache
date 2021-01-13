@@ -76,10 +76,10 @@ class LRUCache(object):
         Given a key this function will delete/remove a key from LRUCache
         Attempting to delete a key that does not exist is a no-op
         """
-        if key in self.cache:
-            self.removeNode(self.cache[key])
-            del self.cache[key]        
-            self.items_in_cache -= 1
+        if key in self.__cache:
+            self.__removeNode(self.__cache[key])
+            del self.__cache[key]        
+            self.__items_in_cache -= 1
     
     def reset(self):
         """
@@ -107,7 +107,7 @@ class LRUCache(object):
         :rtype: key
         This function will return the most recently used node (head of the DLL)
         """
-        return self.__head.key
+        return self.__head.next.key
     
     def least_recently_used(self):
         """
